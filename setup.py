@@ -13,7 +13,6 @@ def get_requirements(file_path:str) -> List[str]:
         requirememts= [req.replace('/n',' ') for req in requirememts]
         if HYPHEN_E_DOT in requirememts:
             requirememts.remove(HYPHEN_E_DOT)
-
     return requirememts
 
 setup(
