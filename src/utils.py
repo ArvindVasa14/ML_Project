@@ -54,3 +54,11 @@ def evaluate_model(actual, predicted):
     rmse= np.sqrt(mse)
     r2_square= r2_score(actual, predicted)
     return mae, rmse, r2_square
+
+def load_object(file_path):
+    try:
+        with open(file_path, "rb") as file_obj:
+            return pickle.load(file_obj)
+
+    except Exception as e:
+        raise CustomException(e, sys)
